@@ -4,18 +4,17 @@ import 'dart:async';
 
 void main() {
    capp_init();
-   capp_enterFrame();
-   for(int i=0;i<5;i++) {
+   while(capp_isQuit() == 0) {
     capp_enterFrame();
-    sleep(const Duration(milliseconds:1000));
+    sleep(const Duration(milliseconds:100));
    }
 }
-main2() async {
-   await new Future.delayed(const Duration(milliseconds:1000));
-   print("B\r\n");
 
-   for(int i=0;i<5;i++) {
+main2() async {
+   capp_init();
+
+   for(int i=0;i<5*10;i++) {
     capp_enterFrame();
-    await new Future.delayed(const Duration(milliseconds:1000));
+    await new Future.delayed(const Duration(milliseconds:100));
    }
 }

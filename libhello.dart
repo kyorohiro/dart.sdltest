@@ -5,3 +5,4 @@ import 'dart:isolate';
 
 int capp_enterFrame() native "capp_enterFrame";
 int capp_init() native "capp_init";
+int capp_isQuit() native "capp_isQuit";
